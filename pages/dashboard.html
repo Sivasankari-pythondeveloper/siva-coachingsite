@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Client Dashboard | SpeakPro</title>
+<link rel="icon" type="image/png" href="../assets/images/mic.png">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+/* ===============================
+   GLOBAL STYLE
+================================= */
+body{
+  font-family: 'Poppins', sans-serif;
+  background:#f4f7fc;
+  transition:0.3s;
+}
+
+
+.dashboard-wrapper{
+  display:flex;
+  min-height:100vh;
+}
+
+/* ===============================
+   SIDEBAR
+================================= */
+.sidebar{
+  width:260px;
+  background:#2f4a8a;
+  color:white;
+  padding:30px 20px;
+}
+
+.sidebar h4{
+  font-weight:700;
+  margin-bottom:30px;
+  cursor:pointer;
+}
+
+.sidebar a{
+  display:block;
+  color:white;
+  text-decoration:none;
+  padding:12px 15px;
+  border-radius:10px;
+  margin-bottom:10px;
+  transition:0.3s;
+}
+
+.sidebar a:hover,
+.sidebar a.active{
+  background:#f9a826;
+  transform:translateX(5px);
+}
+
+/* ===============================
+   MAIN CONTENT
+================================= */
+.main-content{
+  flex:1;
+  padding:40px;
+}
+
+.section-title{
+  color:#2f4a8a;
+  font-weight:700;
+}
+
+/* ===============================
+   CARDS
+================================= */
+.card-custom{
+  background:white;
+  padding:25px;
+  border-radius:18px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.05);
+  transition:0.3s;
+}
+
+.card-custom:hover{
+  transform:translateY(-5px);
+}
+
+/* ===============================
+   BUTTON
+================================= */
+.btn-theme{
+  background:#f9a826;
+  border:none;
+  color:white;
+  border-radius:25px;
+  padding:8px 20px;
+}
+
+.btn-theme:hover{
+  background:#e2951c;
+}
+
+/* ===============================
+   VIDEO CARD
+================================= */
+.video-card-modern{
+  background:white;
+  border-radius:18px;
+  overflow:hidden;
+  box-shadow:0 10px 25px rgba(0,0,0,0.05);
+  transition:0.3s;
+}
+
+.video-card-modern:hover{
+  transform:translateY(-8px);
+}
+
+.video-thumb{
+  position:relative;
+}
+
+.video-thumb img{
+  width:100%;
+  height:180px;
+  object-fit:cover;
+}
+
+.duration{
+  position:absolute;
+  bottom:10px;
+  right:10px;
+  background:#000;
+  color:white;
+  padding:2px 6px;
+  font-size:12px;
+  border-radius:4px;
+}
+
+.play-overlay{
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  background:#f9a826;
+  color:white;
+  width:50px;
+  height:50px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:18px;
+  opacity:0;
+  transition:0.3s;
+}
+
+.video-card-modern:hover .play-overlay{
+  opacity:1;
+}
+
+.video-info{
+  padding:15px;
+}
+
+/* ===============================
+   FEEDBACK CARD
+================================= */
+.feedback-card{
+  background:white;
+  padding:20px;
+  border-radius:15px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.05);
+}
+
+.feedback-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:10px;
+}
+
+/* ===============================
+   PROFILE CARD
+================================= */
+.profile-card{
+  background:white;
+  padding:25px;
+  border-radius:18px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.05);
+}
+
+.profile-img{
+  width:120px;
+  height:120px;
+  border-radius:50%;
+  object-fit:cover;
+}
+
+/* ===============================
+   DARK MODE
+================================= */
+body.dark-mode{
+  background:#121212;
+  color:white;
+}
+
+body.dark-mode .sidebar{
+  background:#0d1a33;
+}
+
+body.dark-mode .card-custom,
+body.dark-mode .video-card-modern,
+body.dark-mode .feedback-card,
+body.dark-mode .profile-card{
+  background:#1e1e1e;
+  color:white;
+}
+
+body.dark-mode .section-title{
+  color:#f9a826;
+}
+/* ===============================
+   SIDEBAR TOGGLES
+================================= */
+
+.toggle-btn{
+  background:rgba(255,255,255,0.15);
+  border:none;
+  width:40px;
+  height:40px;
+  border-radius:50%;
+  color:white;
+  font-size:16px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.toggle-btn:hover{
+  background:#f9a826;
+  color:#121212;
+  transform:scale(1.1) rotate(10deg);
+}
+
+body.dark-mode .toggle-btn{
+  background:rgba(255,255,255,0.1);
+}
+
+/* ===============================
+   RESPONSIVE
+================================= */
+
+/* ===============================
+   MOBILE SIDEBAR TOGGLE
+================================= */
+
+.mobile-toggle{
+  display:none;
+  position:fixed;
+  top:20px;
+  left:20px;
+  width:45px;
+  height:45px;
+  border:none;
+  border-radius:10px;
+  background:#2f4a8a;
+  color:white;
+  font-size:18px;
+  z-index:2000;
+}
+
+@media(max-width:992px){
+
+  .sidebar{
+    position:fixed;
+    top:0;
+    left:-260px;
+    height:100%;
+    width:260px;
+    z-index:1500;
+    transition:0.4s;
+  }
+
+  .sidebar.active{
+    left:0;
+  }
+
+  .mobile-toggle{
+    display:block;
+  }
+
+  .main-content{
+    padding:80px 20px;
+  }
+}
+.sidebar{
+  flex-shrink:0;
+}
+
+@media(max-width:992px){
+  .sidebar{
+    padding-top:80px;   /* space for toggle button */
+  }
+}
+</style>
+</head>
+
+<body>
+<button class="mobile-toggle" onclick="toggleSidebar()">
+  <i class="fas fa-bars"></i>
+</button>
+<div class="dashboard-wrapper">
+
+  <!-- Sidebar -->
+  <div class="sidebar">
+
+    <!-- Clickable Logo -->
+    <h4 onclick="window.location.href='../index.html'">
+      SpeakPro
+    </h4>
+
+    <a href="#" class="active" onclick="showSection(event,'overview')">
+      <i class="fas fa-chart-line me-2"></i> Overview
+    </a>
+
+    <a href="#" onclick="showSection(event,'videos')">
+      <i class="fas fa-video me-2"></i> Video Lessons
+    </a>
+
+    <a href="#" onclick="showSection(event,'practice')">
+      <i class="fas fa-calendar-check me-2"></i> Practice Sessions
+    </a>
+
+    <a href="#" onclick="showSection(event,'feedback')">
+      <i class="fas fa-comments me-2"></i> Feedback
+    </a>
+
+    <a href="#" onclick="showSection(event,'profile')">
+      <i class="fas fa-user me-2"></i> Profile
+    </a>
+
+    <!-- Logout -->
+    <a href="login.html">
+      <i class="fas fa-sign-out-alt me-2"></i> Logout
+    </a>
+<hr>
+
+<div class="d-flex gap-2 mt-3">
+
+  <!-- Dark Mode Toggle -->
+  <button class="toggle-btn" onclick="toggleDark()" title="Dark Mode">
+    <i class="fas fa-moon"></i>
+  </button>
+
+  <!-- RTL Toggle -->
+  <button class="toggle-btn" onclick="toggleRTL()" title="RTL Mode">
+    <i class="fas fa-right-left"></i>
+  </button>
+
+</div>
+  </div>
+
+
+  <!-- Main Content -->
+  <div class="main-content">
+
+    <!-- Overview -->
+    <div id="overview" class="content-section">
+      <h3 class="section-title mb-4">Dashboard Overview</h3>
+
+      <div class="row g-4">
+
+        <div class="col-lg-6">
+          <div class="card-custom">
+            <h5 class="mb-3">Learning Progress</h5>
+            <canvas id="progressChart"></canvas>
+          </div>
+        </div>
+
+        <div class="col-lg-6">
+          <div class="card-custom">
+            <h5 class="mb-3">Session Summary</h5>
+
+            <table class="table align-middle">
+              <thead class="table-light">
+                <tr>
+                  <th>Category</th>
+                  <th>Count</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Completed Lessons</td>
+                  <td>12</td>
+                  <td><span class="badge bg-success">Done</span></td>
+                </tr>
+                <tr>
+                  <td>In Progress</td>
+                  <td>5</td>
+                  <td><span class="badge bg-warning text-dark">Ongoing</span></td>
+                </tr>
+                <tr>
+                  <td>Upcoming Sessions</td>
+                  <td>3</td>
+                  <td><span class="badge bg-primary">Scheduled</span></td>
+                </tr>
+              </tbody>
+            </table>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Other Sections -->
+    <div id="videos" class="content-section d-none">
+      <h3 class="section-title">Video Lessons</h3>
+      
+<div class="row g-4">
+
+  <!-- Lesson 1 -->
+  <div class="col-md-6 col-lg-4">
+    <div class="video-card-modern">
+      <div class="video-thumb">
+        <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d" class="img-fluid">
+        <span class="duration">12:45</span>
+        <div class="play-overlay">
+          <i class="fas fa-play"></i>
+        </div>
+      </div>
+      <div class="video-info">
+        <h6>Overcoming Stage Fear</h6>
+        <p>Master techniques to eliminate anxiety before speaking.</p>
+        <button class="btn btn-theme btn-sm">Watch Now</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Lesson 2 -->
+  <div class="col-md-6 col-lg-4">
+    <div class="video-card-modern">
+      <div class="video-thumb">
+        <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c" class="img-fluid">
+        <span class="duration">18:20</span>
+        <div class="play-overlay">
+          <i class="fas fa-play"></i>
+        </div>
+      </div>
+      <div class="video-info">
+        <h6>Structuring Powerful Speeches</h6>
+        <p>Learn storytelling frameworks that captivate audiences.</p>
+        <button class="btn btn-theme btn-sm">Watch Now</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Lesson 3 -->
+  <div class="col-md-6 col-lg-4">
+    <div class="video-card-modern">
+      <div class="video-thumb">
+        <img src="https://images.unsplash.com/photo-1492724441997-5dc865305da7" class="img-fluid">
+        <span class="duration">15:10</span>
+        <div class="play-overlay">
+          <i class="fas fa-play"></i>
+        </div>
+      </div>
+      <div class="video-info">
+        <h6>Body Language & Confidence</h6>
+        <p>Improve posture, gestures, and stage presence.</p>
+        <button class="btn btn-theme btn-sm">Watch Now</button>
+      </div>
+    </div>
+  </div>
+
+</div>
+    </div>
+
+    <div id="practice" class="content-section d-none">
+      <h3 class="section-title mb-4">Practice Session Scheduling</h3>
+
+<div class="row g-4">
+
+  <!-- Booking Form -->
+  <div class="col-lg-6">
+    <div class="card-custom">
+      <h5 class="mb-3">Book a New Session</h5>
+
+      <form>
+        <div class="mb-3">
+          <label class="form-label">Session Type</label>
+          <select class="form-select">
+            <option>One-on-One Coaching</option>
+            <option>Mock Presentation Practice</option>
+            <option>Interview Preparation</option>
+            <option>Confidence Building Session</option>
+          </select>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">Preferred Date</label>
+          <input type="date" class="form-control">
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">Available Time Slot</label>
+          <select class="form-select">
+            <option>09:00 AM - 10:00 AM</option>
+            <option>11:00 AM - 12:00 PM</option>
+            <option>02:00 PM - 03:00 PM</option>
+            <option>04:00 PM - 05:00 PM</option>
+          </select>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">Session Notes</label>
+          <textarea class="form-control" rows="3" placeholder="Mention your goals or topics to focus on..."></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-theme w-100">
+          Confirm Booking
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Upcoming Sessions -->
+  <div class="col-lg-6">
+    <div class="card-custom">
+      <h5 class="mb-3">Upcoming Sessions</h5>
+
+      <div class="table-responsive">
+        <table class="table align-middle">
+          <thead class="table-light">
+            <tr>
+              <th>Date</th>
+              <th>Time</th>
+              <th>Type</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>March 10, 2026</td>
+              <td>11:00 AM</td>
+              <td>Mock Presentation</td>
+              <td><span class="badge bg-primary">Scheduled</span></td>
+            </tr>
+            <tr>
+              <td>March 15, 2026</td>
+              <td>02:00 PM</td>
+              <td>Confidence Session</td>
+              <td><span class="badge bg-success">Confirmed</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <small class="text-muted">
+        You will receive a Zoom link 30 minutes before your session.
+      </small>
+    </div>
+  </div>
+
+</div>
+    </div>
+
+    <div id="feedback" class="content-section d-none">
+      <h3 class="section-title mb-4">Coach Feedback & Performance Review</h3>
+
+<div class="row g-4">
+
+  <!-- Feedback Card 1 -->
+  <div class="col-lg-6">
+    <div class="feedback-card">
+      <div class="feedback-header">
+        <h6>Session 1 – Stage Confidence</h6>
+        <span class="badge bg-success">Improving</span>
+      </div>
+
+      <div class="rating mb-2">
+        <i class="fas fa-star text-warning"></i>
+        <i class="fas fa-star text-warning"></i>
+        <i class="fas fa-star text-warning"></i>
+        <i class="fas fa-star text-warning"></i>
+        <i class="far fa-star text-warning"></i>
+        <span class="ms-2 text-muted">4.0 / 5</span>
+      </div>
+
+      <p>
+        Great improvement in voice clarity and posture. 
+        Work on slowing down your speech and adding strategic pauses 
+        to create stronger audience impact.
+      </p>
+
+      <button class="btn btn-theme btn-sm">
+        <i class="fas fa-download me-2"></i> Download Report
+      </button>
+    </div>
+  </div>
+
+  <!-- Feedback Card 2 -->
+  <div class="col-lg-6">
+    <div class="feedback-card">
+      <div class="feedback-header">
+        <h6>Session 2 – Presentation Structure</h6>
+        <span class="badge bg-primary">Excellent</span>
+      </div>
+
+      <div class="rating mb-2">
+        <i class="fas fa-star text-warning"></i>
+        <i class="fas fa-star text-warning"></i>
+        <i class="fas fa-star text-warning"></i>
+        <i class="fas fa-star text-warning"></i>
+        <i class="fas fa-star text-warning"></i>
+        <span class="ms-2 text-muted">5.0 / 5</span>
+      </div>
+
+      <p>
+        Outstanding storytelling flow and logical structure. 
+        Your introduction was powerful and engaging. 
+        Keep refining transitions between sections.
+      </p>
+
+      <button class="btn btn-theme btn-sm">
+        <i class="fas fa-download me-2"></i> Download Report
+      </button>
+    </div>
+  </div>
+
+</div>
+
+<!-- Overall Progress -->
+<div class="card-custom mt-4">
+  <h5 class="mb-3">Overall Performance Summary</h5>
+
+  <div class="progress mb-3" style="height:10px;">
+    <div class="progress-bar" 
+         role="progressbar" 
+         style="width: 75%; background:#2f4a8a;">
+    </div>
+  </div>
+
+  <p class="text-muted">
+    You have shown a 75% overall improvement in confidence, structure, and delivery.
+    Continue attending practice sessions to achieve mastery level.
+  </p>
+</div>
+    </div>
+
+    <div id="profile" class="content-section d-none">
+      <h3 class="section-title mb-4">My Profile</h3>
+
+<div class="row g-4">
+
+  <!-- Left: Profile Card -->
+  <div class="col-lg-4">
+    <div class="profile-card text-center">
+      <img src="https://i.pravatar.cc/150?img=12" class="profile-img mb-3">
+
+      <h5>John Doe</h5>
+      <p class="text-muted">Advanced Public Speaking Program</p>
+
+      <button class="btn btn-theme btn-sm mt-2">
+        <i class="fas fa-camera me-2"></i> Change Photo
+      </button>
+    </div>
+
+    <!-- Skill Progress -->
+    <div class="card-custom mt-4">
+      <h6 class="mb-3">Skill Progress</h6>
+
+      <label>Confidence</label>
+      <div class="progress mb-3" style="height:8px;">
+        <div class="progress-bar" style="width:80%; background:#2f4a8a;"></div>
+      </div>
+
+      <label>Clarity</label>
+      <div class="progress mb-3" style="height:8px;">
+        <div class="progress-bar bg-success" style="width:70%;"></div>
+      </div>
+
+      <label>Body Language</label>
+      <div class="progress mb-3" style="height:8px;">
+        <div class="progress-bar bg-warning" style="width:65%;"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Right: Editable Info -->
+  <div class="col-lg-8">
+    <div class="card-custom">
+      <h5 class="mb-3">Personal Information</h5>
+
+      <form>
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <label class="form-label">Full Name</label>
+            <input type="text" class="form-control" value="John Doe">
+          </div>
+
+          <div class="col-md-6 mb-3">
+            <label class="form-label">Email</label>
+            <input type="email" class="form-control" value="john@email.com">
+          </div>
+
+          <div class="col-md-6 mb-3">
+            <label class="form-label">Phone</label>
+            <input type="text" class="form-control" value="+91 98765 43210">
+          </div>
+
+          <div class="col-md-6 mb-3">
+            <label class="form-label">Experience Level</label>
+            <select class="form-select">
+              <option>Beginner</option>
+              <option selected>Intermediate</option>
+              <option>Advanced</option>
+            </select>
+          </div>
+
+          <div class="col-12 mb-3">
+            <label class="form-label">Goals</label>
+            <textarea class="form-control" rows="3">
+Improve stage confidence and presentation skills.
+            </textarea>
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-theme">
+          <i class="fas fa-save me-2"></i> Save Changes
+        </button>
+      </form>
+    </div>
+
+    <!-- Account Settings -->
+    <div class="card-custom mt-4">
+      <h5 class="mb-3">Account Settings</h5>
+
+      <div class="d-flex justify-content-between align-items-center mb-3">
+        <div>
+          <strong>Password</strong>
+          <p class="text-muted mb-0">Last changed 30 days ago</p>
+        </div>
+        <button class="btn btn-outline-primary btn-sm">Change Password</button>
+      </div>
+
+      <div class="d-flex justify-content-between align-items-center">
+        <div>
+          <strong>Membership Plan</strong>
+          <p class="text-muted mb-0">Premium Coaching – Active</p>
+        </div>
+        <button class="btn btn-outline-danger btn-sm">Cancel Plan</button>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+    </div>
+
+  </div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script>
+function showSection(e, sectionId){
+  e.preventDefault();
+
+  document.querySelectorAll('.content-section')
+    .forEach(sec => sec.classList.add('d-none'));
+
+  document.getElementById(sectionId)
+    .classList.remove('d-none');
+
+  document.querySelectorAll('.sidebar a')
+    .forEach(link => link.classList.remove('active'));
+
+  e.currentTarget.classList.add('active');
+
+  if(window.innerWidth < 992){
+    document.querySelector(".sidebar").classList.remove("active");
+  }
+}
+
+const ctx = document.getElementById('progressChart');
+
+new Chart(ctx, {
+  type: 'doughnut',
+  data: {
+    labels: ['Completed', 'In Progress', 'Upcoming'],
+    datasets: [{
+      data: [12, 5, 3],
+      backgroundColor: ['#2f4a8a','#f9a826','#6c757d'],
+      borderWidth: 0
+    }]
+  },
+  options: {
+    cutout: '65%',
+    animation: { duration: 1500 },
+    plugins: { legend: { position: 'bottom' } }
+  }
+});
+</script>
+
+<script>
+/* DARK MODE */
+function toggleDark(){
+  document.body.classList.toggle("dark-mode");
+
+  localStorage.setItem(
+    "darkMode",
+    document.body.classList.contains("dark-mode")
+  );
+}
+
+/* RTL MODE */
+function toggleRTL(){
+  if(document.body.dir === "rtl"){
+    document.body.dir = "ltr";
+  }else{
+    document.body.dir = "rtl";
+  }
+}
+
+/* Load Saved Dark Mode */
+if(localStorage.getItem("darkMode") === "true"){
+  document.body.classList.add("dark-mode");
+}
+</script>
+<script>
+function toggleSidebar(){
+  document.querySelector(".sidebar").classList.toggle("active");
+}
+</script>
+</body>
+</html>

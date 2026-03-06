@@ -1,0 +1,2664 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>About Us | SpeakPro</title>
+<link rel="icon" type="image/png" href="../assets/images/mic.png">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+ <link rel="stylesheet" href="../assets/fonts/icomoon/style.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/css/jquery-ui.css">
+    <link rel="stylesheet" href="../assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="../assets/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="../assets/css/owl.theme.default.min.css">
+
+    <link rel="stylesheet" href="../assets/css/jquery.fancybox.min.css">
+
+    <link rel="stylesheet" href="../assets/css/bootstrap-datepicker.css">
+
+    <link rel="stylesheet" href="../assets/fonts/flaticon/font/flaticon.css">
+
+    <link rel="stylesheet" href="../assets/css/aos.css">
+
+    <link rel="stylesheet" href="../assets/css/style.css">
+   <link rel="stylesheet" href="../assets/css/navbar.css">
+
+
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+    }
+.login-text {
+  font-weight: 600;        /* make it bold */
+  color: #fff;             /* white text on dark navbar */
+  text-transform: uppercase; /* optional: all caps */
+  letter-spacing: 0.5px;   /* optional: spacing for premium look */
+}
+
+.login-text:hover {
+  color: #f9a826;          /* orange hover effect */
+  text-decoration: none;   /* remove underline */
+}
+
+    /* Hero */
+    .about-hero {
+      
+      padding-top: 100px; 
+      padding-bottom: 60px;
+      text-align: center;
+    }
+
+    .about-hero h1 {
+      color: #2f4a8a;
+      font-weight: 700;
+    }
+
+    @media (max-width: 767px) { .about-hero { padding-top: 80px; padding-bottom: 40px; } }
+    /* About Content */
+    .about-section {
+      padding: 90px 0;
+    }
+
+    .about-img {
+      border-radius: 15px;
+      width: 100%;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+    }
+
+    /* Vision & Mission */
+    .vm-section {
+      background: #2f4a8a;
+      color: white;
+      padding: 80px 0;
+    }
+
+    .vm-card {
+      background: rgba(255,255,255,0.1);
+      padding: 30px;
+      border-radius: 15px;
+      transition: 0.3s;
+      height: 100%;
+    }
+
+    .vm-card:hover {
+      background: rgba(255,255,255,0.2);
+      transform: translateY(-5px);
+    }
+
+    /* Team */
+    .team-section {
+      padding: 70px 0;
+      text-align: center;
+    }
+
+    .team-card {
+      background: #fff;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+      transition: 0.3s;
+    }
+
+    .team-card:hover {
+      transform: translateY(-8px);
+    }
+
+    .team-img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 15px;
+    }
+
+    /* CTA */
+    .cta-section {
+      background: #f9a826;
+      color: white;
+      padding: 60px 0;
+      text-align: center;
+    }
+
+    .cta-btn {
+      background: #2f4a8a;
+      color: white;
+      padding: 12px 30px;
+      border-radius: 30px;
+    }
+
+    .cta-btn:hover {
+      background: #1e3569;
+      color: white;
+    }
+
+    /* Dark Mode Global */
+body.dark-mode {
+  background-color: #121212; /* global dark background */
+  color: #ffffff;
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+/* Navbar */
+
+/* Hero Section */
+
+body.dark-mode .about-hero h1 {
+  color: #f9a826; /* orange highlight */
+}
+
+/* About Content */
+body.dark-mode .about-section {
+  background: #24335c; /* dark section background */
+  color: #ffffff;
+}
+body.dark-mode .about-img {
+  box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+}
+
+/* Vision & Mission */
+body.dark-mode .vm-section {
+  background: #0d1a33;
+  color: #ffffff;
+}
+body.dark-mode .vm-card {
+  background: rgba(255,255,255,0.05);
+}
+body.dark-mode .vm-card:hover {
+  background: rgba(255,255,255,0.1);
+}
+
+/* Team Section */
+body.dark-mode .team-section {
+  background: #2b3d6d;
+  color: #ffffff;
+}
+body.dark-mode .team-card {
+  background: #1e2a4a;
+  color: #ffffff;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+}
+
+/* CTA Section */
+body.dark-mode .cta-section {
+  background: #f9a826; /* keep orange CTA */
+  color: #121212;      /* dark text for contrast */
+}
+body.dark-mode .cta-btn {
+  background: #1b2645;
+  color: #ffffff;
+}
+body.dark-mode .cta-btn:hover {
+  background: #24335c;
+}
+
+/* Footer */
+body.dark-mode footer {
+  background: #1b2645;
+  color: #ffffff;
+}
+
+
+/* ===============================
+   PREMIUM FOOTER FIX
+================================= */
+
+.site-footer {
+  background: #0d2c54;
+  color: #ffffff;
+  padding: 70px 0 30px;
+}
+
+.site-footer .row {
+  align-items: flex-start;
+}
+
+/* Footer Titles */
+.site-footer .footer-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 25px;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.site-footer .footer-title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 45px;
+  height: 3px;
+  background: #f9a826;
+  border-radius: 3px;
+}
+
+/* Paragraph */
+.site-footer p {
+  color: rgba(255,255,255,0.7);
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+/* Links */
+.site-footer .footer-links li {
+  margin-bottom: 10px;
+}
+
+.site-footer .footer-links a {
+  color: rgba(255,255,255,0.75);
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.site-footer .footer-links a:hover {
+  color: #f9a826;
+  padding-left: 5px;
+}
+
+/* Social Icons */
+.site-footer .social-icons a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: rgba(255,255,255,0.1);
+  color: #fff;
+  border-radius: 50%;
+  margin-right: 10px;
+  transition: 0.3s ease;
+}
+
+.site-footer .social-icons a:hover {
+  background: #f9a826;
+  color: #0d2c54;
+  transform: translateY(-3px);
+}
+
+/* Newsletter */
+.site-footer .footer-subscribe .form-control {
+  border-radius: 30px 0 0 30px;
+  border: none;
+  padding: 10px 20px;
+}
+
+.site-footer .footer-subscribe .btn {
+  border-radius: 0 30px 30px 0;
+  background: #f9a826;
+  border: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.site-footer .footer-subscribe .btn:hover {
+  background: #ffb347;
+}
+
+/* Bottom Section */
+.site-footer .footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.1);
+  padding-top: 20px;
+  margin-top: 40px;
+}
+
+.site-footer .footer-bottom p {
+  margin: 0;
+  font-size: 13px;
+  color: rgba(255,255,255,0.6);
+}
+
+/* Fix column spacing */
+.site-footer .col-md-4,
+.site-footer .col-md-3 {
+  margin-bottom: 30px;
+}
+.custom-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+  background: #2f4a8a; /* your primary color */
+  transition: all 0.3s ease;
+}
+@media (max-width: 768px) {
+
+  .site-footer {
+    text-align: left;
+  }
+
+  .site-footer .footer-title::after {
+    left: 0;
+    transform: none;
+  }
+
+  .site-footer .social-icons {
+    justify-content: flex-start;
+  }
+
+  .site-footer .social-icons a {
+    margin-right: 10px;
+    margin-left: 0;
+  }
+
+}   /* ===============================
+   TOGGLE BUTTON STYLE
+================================= */
+
+.toggle-btn {
+  background: rgba(255, 255, 255, 0.15);
+  border: none;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  color: #ffffff;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Hover Effect */
+.toggle-btn:hover {
+  background: #f9a826;
+  color: #121212;
+  transform: rotate(15deg) scale(1.1);
+}
+
+/* Dark Mode Toggle Style */
+body.dark-mode .toggle-btn {
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+}
+
+body.dark-mode .toggle-btn:hover {
+  background: #f9a826;
+  color: #121212;
+}
+
+    /* Mobile Adjustments */
+    @media (max-width: 768px) {
+      .nav-link {
+        margin-left: 0;
+        padding: 10px 0;
+      }
+
+      .about-hero {
+        padding: 60px 20px;
+      }
+
+      .about-section {
+        text-align: center;
+      }
+    }
+/* ===============================
+   MOBILE SLIDE MENU
+================================= */
+
+@media (max-width: 992px) {
+
+  .mobile-menu {
+    position: fixed;
+    top: 0;
+    right: -260px;
+    width: 260px;
+    height: 100vh;
+    background: #2f4a8a;
+    padding-top: 80px;
+    transition: 0.4s ease;
+    z-index: 2000;
+  }
+
+  .mobile-menu.show {
+    right: 0;
+  }
+
+  .navbar-nav {
+    flex-direction: column;
+    align-items: start;
+    padding-left: 20px;
+  }
+
+  .nav-link {
+    margin: 10px 0;
+  }
+}
+.navbar-toggler{
+  border: none;
+}
+
+.navbar-toggler:focus{
+  box-shadow: none;
+}
+/* ===================================================
+   ABOUT PAGE PREMIUM DESIGN (SAFE - ISOLATED)
+=================================================== */
+
+.about-page .about-hero {
+  background: linear-gradient(135deg, #2f4a8a, #1e3569);
+  color: white;
+  padding: 110px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.about-page .about-hero::after {
+  content: "";
+  position: absolute;
+  width: 350px;
+  height: 350px;
+  background: rgba(249,168,38,0.25);
+  border-radius: 50%;
+  top: -100px;
+  right: -100px;
+  filter: blur(120px);
+}
+
+.about-page .about-section {
+  padding: 100px 0;
+}
+
+.about-page .about-img {
+  border-radius: 20px;
+  transition: 0.4s ease;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+}
+
+.about-page .about-img:hover {
+  transform: scale(1.05);
+}
+
+/* ===== Vision Mission ===== */
+
+.about-page .vm-section {
+  background: linear-gradient(135deg, #1e3569, #2f4a8a);
+  padding: 100px 0;
+}
+
+.about-page .vm-card {
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(12px);
+  padding: 40px;
+  border-radius: 20px;
+  transition: 0.4s;
+  height: 100%;
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+.about-page .vm-card:hover {
+  transform: translateY(-12px);
+  background: rgba(255,255,255,0.15);
+}
+
+/* ===== Team Section ===== */
+
+.about-page .team-section {
+  padding: 100px 0;
+  background: #f4f7fc;
+}
+
+.about-page .team-card {
+  background: white;
+  padding: 40px;
+  border-radius: 25px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+  transition: 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.about-page .team-card::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(90deg, #2f4a8a, #f9a826);
+  top: 0;
+  left: 0;
+}
+
+.about-page .team-card:hover {
+  transform: translateY(-15px);
+  box-shadow: 0 25px 60px rgba(0,0,0,0.15);
+}
+
+.about-page .team-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+  transition: 0.3s;
+}
+
+.about-page .team-card:hover .team-img {
+  transform: scale(1.1);
+}
+
+/* Why cards */
+.why-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: #fff;
+}
+.why-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+/* Icon circle */
+.icon-circle {
+  background: #f9a826;
+  color: #fff;
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+/* Stats section */
+.stats-section h2 {
+  font-size: 2.5rem;
+}
+.stats-section p {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.why-section {
+  background-color: #f8f9fa;
+}
+
+body.dark-mode .why-section {
+  background-color: #0f172a;
+}
+
+/* =========================
+   WHY SECTION DARK MODE FIX
+========================= */
+
+body.dark-mode .why-card {
+  background-color: #1e293b !important; /* dark card */
+  color: #ffffff !important;
+}
+
+body.dark-mode .why-card h5 {
+  color: #ffffff !important;
+}
+
+body.dark-mode .why-card p {
+  color: rgba(255, 255, 255, 0.75) !important;
+}
+.footer-about{
+  position:relative;
+  background:url('assets/images/footer-banner.jpg') center/cover no-repeat;
+  border-radius:20px;
+  overflow:hidden;
+}
+
+.footer-about::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:rgba(0,0,0,0.65);
+}
+
+.footer-banner-content{
+  position:relative;
+  z-index:2;
+  padding:30px;
+  color:#fff;
+}
+
+.footer-about{
+  position:relative;
+  background:url('assets/images/footer-banner.jpg') center/cover no-repeat;
+  border-radius:20px;
+  overflow:hidden;
+}
+
+.footer-about::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:rgba(0,0,0,0.65);
+}
+
+.footer-banner-content{
+  position:relative;
+  z-index:2;
+  padding:30px;
+  color:#fff;
+}
+
+/* ===============================
+   ABOUT HERO BANNER
+================================= */
+
+.about-hero-banner{
+  position: relative;
+  height: 70vh;
+  background: url('../assets/images/about-bg.jpg') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  overflow: hidden;
+}
+
+/* Overlay */
+.about-hero-overlay{
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(13,44,84,0.85),
+    rgba(0,0,0,0.75)
+  );
+}
+
+/* Content */
+.about-hero-content{
+  position: relative;
+  z-index: 2;
+}
+
+.about-hero-content h1{
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.about-hero-content p{
+  font-size: 18px;
+  opacity: 0.9;
+}
+/* Force hero image to stay in dark mode */
+body.dark-mode .about-hero-banner {
+  background-image: url('../assets/images/about-bg.jpg') !important;
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+}
+
+/* ===== DARK MODE TEXT FIX ===== */
+/* ==========================================
+   ABOUT PAGE DARK MODE CLEAN FIX
+========================================== */
+
+/* Remove strange background layers */
+body.dark-mode .why-card,
+body.dark-mode .team-card,
+body.dark-mode .vm-card {
+  background: #1e293b !important;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.4) !important;
+}
+
+/* Remove dark strips behind headings */
+body.dark-mode .why-card h5,
+body.dark-mode .team-card h5,
+body.dark-mode .vm-card h3 {
+  background: transparent !important;
+}
+
+/* Remove dark strips behind paragraphs */
+body.dark-mode .why-card p,
+body.dark-mode .team-card p,
+body.dark-mode .vm-card p {
+  background: transparent !important;
+}
+
+/* Fix section backgrounds */
+body.dark-mode .team-section {
+  background: #0f172a !important;
+}
+
+body.dark-mode .vm-section {
+  background: linear-gradient(135deg,#0d1a33,#15264a) !important;
+}
+.custom-menu li a {
+  white-space: nowrap;
+}
+/* ==============================
+   WOW VISION MISSION SECTION
+================================= */
+
+.vm-wow-section{
+padding:100px 0;
+background:linear-gradient(135deg,#1c2f5c,#2f4a8a);
+color:white;
+position:relative;
+overflow:hidden;
+}
+
+/* Title */
+
+.vm-title{
+font-size:38px;
+font-weight:700;
+margin-bottom:10px;
+}
+
+.vm-subtitle{
+opacity:.8;
+font-size:16px;
+}
+
+/* Row spacing */
+
+.vm-row{
+row-gap:40px;
+}
+
+/* Card */
+
+.vm-wow-card{
+
+background:rgba(255,255,255,0.08);
+backdrop-filter:blur(12px);
+
+border-radius:20px;
+padding:45px 35px;
+
+text-align:center;
+
+transition:all .4s ease;
+
+border:1px solid rgba(255,255,255,.15);
+
+height:100%;
+
+position:relative;
+overflow:hidden;
+
+}
+
+/* glowing border */
+
+.vm-wow-card::before{
+
+content:"";
+position:absolute;
+inset:0;
+border-radius:20px;
+padding:1px;
+
+background:linear-gradient(135deg,#f9a826,#ffffff,#f9a826);
+
+-webkit-mask:
+linear-gradient(#fff 0 0) content-box,
+linear-gradient(#fff 0 0);
+
+-webkit-mask-composite:xor;
+mask-composite:exclude;
+
+}
+
+/* hover */
+
+.vm-wow-card:hover{
+
+transform:translateY(-12px) scale(1.03);
+
+background:rgba(255,255,255,0.18);
+
+box-shadow:0 25px 70px rgba(0,0,0,.4);
+
+}
+
+/* icon */
+
+.vm-icon-circle{
+
+width:75px;
+height:75px;
+
+background:#f9a826;
+
+border-radius:50%;
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+margin:0 auto 25px;
+
+font-size:28px;
+color:white;
+
+box-shadow:0 12px 35px rgba(0,0,0,.3);
+
+transition:.3s;
+
+}
+
+.vm-wow-card:hover .vm-icon-circle{
+
+transform:scale(1.15) rotate(8deg);
+
+}
+
+/* heading */
+
+.vm-wow-card h3{
+
+font-weight:700;
+margin-bottom:15px;
+
+}
+
+/* text */
+
+.vm-wow-card p{
+
+opacity:.9;
+line-height:1.6;
+
+}
+
+/* floating light effect */
+
+.vm-wow-section::after{
+
+content:"";
+position:absolute;
+
+width:350px;
+height:350px;
+
+background:rgba(249,168,38,.25);
+
+border-radius:50%;
+
+top:-100px;
+right:-100px;
+
+filter:blur(120px);
+
+}
+
+/* mobile */
+
+@media (max-width:768px){
+
+.vm-title{
+font-size:28px;
+}
+
+.vm-wow-card{
+padding:35px 25px;
+}
+
+}
+
+/* =================================
+   FIX VISION / MISSION DARK MODE
+================================= */
+
+body.dark-mode .vm-wow-section{
+  background: linear-gradient(135deg,#0d1a33,#15264a);
+}
+
+/* Fix card background */
+body.dark-mode .vm-wow-card{
+  background: rgba(255,255,255,0.05) !important;
+  border:1px solid rgba(255,255,255,0.08);
+}
+
+/* Remove dark strips */
+body.dark-mode .vm-wow-card h3,
+body.dark-mode .vm-wow-card p{
+  background: transparent !important;
+}
+
+/* Improve text visibility */
+body.dark-mode .vm-wow-card p{
+  color: rgba(255,255,255,0.85);
+}
+
+/* ==============================
+        PREMIUM TEAM SECTION
+================================= */
+
+.sp-team-section{
+
+padding:100px 0;
+
+background:linear-gradient(180deg,#f4f7fc,#eef2f7);
+
+}
+
+/* Title */
+
+.sp-team-title{
+
+font-size:38px;
+font-weight:700;
+color:#1b2645;
+margin-bottom:10px;
+
+}
+
+.sp-team-subtitle{
+
+color:#666;
+
+}
+
+/* Row spacing */
+
+.sp-team-row{
+
+row-gap:40px;
+
+}
+
+/* Team card */
+
+.sp-team-card{
+
+background:white;
+
+border-radius:25px;
+
+padding:40px 30px;
+
+text-align:center;
+
+transition:.4s;
+
+box-shadow:0 15px 40px rgba(0,0,0,0.08);
+
+position:relative;
+
+overflow:hidden;
+
+}
+
+/* gradient border */
+
+.sp-team-card::before{
+
+content:"";
+
+position:absolute;
+
+top:0;
+left:0;
+
+width:100%;
+height:4px;
+
+background:linear-gradient(90deg,#2f4a8a,#f9a826);
+
+}
+
+/* hover */
+
+.sp-team-card:hover{
+
+transform:translateY(-15px);
+
+box-shadow:0 25px 60px rgba(0,0,0,0.18);
+
+}
+
+/* image */
+
+.sp-team-img{
+
+width:120px;
+height:120px;
+
+border-radius:50%;
+
+object-fit:cover;
+
+margin-bottom:20px;
+
+border:5px solid #f9a826;
+
+transition:.3s;
+
+}
+
+.sp-team-card:hover .sp-team-img{
+
+transform:scale(1.1);
+
+}
+
+/* name */
+
+.sp-team-card h4{
+
+font-weight:700;
+
+margin-bottom:5px;
+
+color:#1b2645;
+
+}
+
+/* role */
+
+.sp-team-card span{
+
+color:#666;
+
+font-size:14px;
+
+display:block;
+
+margin-bottom:20px;
+
+}
+
+/* social icons */
+
+.sp-team-social a{
+
+display:inline-flex;
+
+align-items:center;
+
+justify-content:center;
+
+width:38px;
+height:38px;
+
+background:#f4f7fc;
+
+border-radius:50%;
+
+margin:0 5px;
+
+color:#2f4a8a;
+
+transition:.3s;
+
+}
+
+.sp-team-social a:hover{
+
+background:#f9a826;
+
+color:white;
+
+transform:translateY(-4px);
+
+}
+
+/* ==============================
+        DARK MODE
+================================= */
+
+body.dark-mode .sp-team-section{
+
+background:#0f172a;
+
+}
+
+body.dark-mode .sp-team-card{
+
+background:#1e293b;
+
+color:white;
+
+box-shadow:0 20px 50px rgba(0,0,0,0.5);
+
+}
+
+body.dark-mode .sp-team-card h4{
+
+color:white;
+
+}
+
+body.dark-mode .sp-team-card span{
+
+color:rgba(255,255,255,0.7);
+
+}
+
+body.dark-mode .sp-team-social a{
+
+background:#24335c;
+
+color:white;
+
+}
+
+body.dark-mode .sp-team-social a:hover{
+
+background:#f9a826;
+
+color:#121212;
+
+}
+
+/* ==============================
+        MOBILE FIX
+================================= */
+
+@media (max-width:768px){
+
+.sp-team-section{
+
+padding:70px 20px;
+
+}
+
+}
+
+/* =================================
+   FIX TEXT BOXES IN DARK MODE
+================================= */
+
+body.dark-mode .sp-team-card h4,
+body.dark-mode .sp-team-card span,
+body.dark-mode .sp-team-card p {
+  background: transparent !important;
+  padding: 0 !important;
+  margin-bottom: 6px;
+}
+
+/* remove box from social icons container if any */
+body.dark-mode .sp-team-social {
+  background: transparent !important;
+}
+
+
+/* =========================
+   WHY SECTION PREMIUM
+========================= */
+
+.sp-why-section{
+
+padding:110px 0;
+
+background:linear-gradient(135deg,#1c2f5c,#2f4a8a);
+
+color:white;
+
+position:relative;
+
+overflow:hidden;
+
+}
+
+
+/* floating glow */
+
+.sp-why-section::before{
+
+content:"";
+
+position:absolute;
+
+width:400px;
+height:400px;
+
+background:rgba(249,168,38,.25);
+
+border-radius:50%;
+
+top:-120px;
+left:-120px;
+
+filter:blur(120px);
+
+}
+
+
+/* title */
+
+.sp-why-title{
+
+font-size:38px;
+font-weight:700;
+
+margin-bottom:10px;
+
+}
+
+
+/* subtitle */
+
+.sp-why-subtitle{
+
+opacity:.85;
+
+}
+
+
+/* spacing */
+
+.sp-why-row{
+
+row-gap:40px;
+
+}
+
+
+/* card */
+
+.sp-why-card{
+
+background:rgba(255,255,255,.08);
+
+backdrop-filter:blur(12px);
+
+border-radius:20px;
+
+padding:45px 35px;
+
+text-align:center;
+
+transition:.4s;
+
+border:1px solid rgba(255,255,255,.15);
+
+position:relative;
+
+height:100%;
+
+}
+
+
+/* gradient border */
+
+.sp-why-card::before{
+
+content:"";
+
+position:absolute;
+
+inset:0;
+
+border-radius:20px;
+
+padding:1px;
+
+background:linear-gradient(135deg,#f9a826,#ffffff,#f9a826);
+
+-webkit-mask:
+linear-gradient(#fff 0 0) content-box,
+linear-gradient(#fff 0 0);
+
+-webkit-mask-composite:xor;
+mask-composite:exclude;
+
+}
+
+
+/* hover */
+
+.sp-why-card:hover{
+
+transform:translateY(-12px) scale(1.03);
+
+background:rgba(255,255,255,.18);
+
+box-shadow:0 25px 70px rgba(0,0,0,.4);
+
+}
+
+
+/* icon */
+
+.sp-why-icon{
+
+width:70px;
+height:70px;
+
+background:#f9a826;
+
+border-radius:50%;
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+margin:0 auto 20px;
+
+font-size:26px;
+
+color:white;
+
+box-shadow:0 10px 30px rgba(0,0,0,.3);
+
+transition:.3s;
+
+}
+
+
+.sp-why-card:hover .sp-why-icon{
+
+transform:scale(1.15) rotate(8deg);
+
+}
+
+
+/* heading */
+
+.sp-why-card h4{
+
+font-weight:700;
+
+margin-bottom:12px;
+
+}
+
+
+/* text */
+
+.sp-why-card p{
+
+opacity:.9;
+
+line-height:1.6;
+
+}
+
+
+/* =========================
+   DARK MODE
+========================= */
+
+body.dark-mode .sp-why-section{
+
+background:linear-gradient(135deg,#0d1a33,#15264a);
+
+}
+
+
+body.dark-mode .sp-why-card{
+
+background:rgba(255,255,255,.05);
+
+border:1px solid rgba(255,255,255,.08);
+
+}
+
+
+body.dark-mode .sp-why-card p{
+
+color:rgba(255,255,255,.85);
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width:768px){
+
+.sp-why-section{
+
+padding:80px 20px;
+
+}
+
+.sp-why-title{
+
+font-size:28px;
+
+}
+
+}
+
+/* ==============================
+   FIX DARK MODE TEXT BOXES
+============================== */
+
+/* Remove boxes behind headings */
+body.dark-mode .sp-why-card h4,
+body.dark-mode .sp-why-card h5 {
+  background: transparent !important;
+  padding: 0 !important;
+}
+
+/* Remove boxes behind paragraphs */
+body.dark-mode .sp-why-card p {
+  background: transparent !important;
+  padding: 0 !important;
+}
+
+/* Ensure card background only comes from the card itself */
+body.dark-mode .sp-why-card {
+  background: rgba(255,255,255,0.05) !important;
+}
+
+/* Improve text readability */
+body.dark-mode .sp-why-card p {
+  color: rgba(255,255,255,0.85);
+}
+
+/* Add vertical spacing between cards on mobile */
+.sp-why-row {
+  row-gap: 40px;
+}
+
+
+/* ===============================
+        PREMIUM STATS SECTION
+================================ */
+
+.sp-stats-section{
+
+padding:110px 0;
+
+background:linear-gradient(135deg,#2f4a8a,#1c2f5c);
+
+color:white;
+
+position:relative;
+
+overflow:hidden;
+
+}
+
+/* glowing background */
+
+.sp-stats-section::before{
+
+content:"";
+
+position:absolute;
+
+width:350px;
+height:350px;
+
+background:rgba(249,168,38,.25);
+
+border-radius:50%;
+
+top:-120px;
+right:-120px;
+
+filter:blur(120px);
+
+}
+
+/* spacing */
+
+.sp-stats-row{
+
+row-gap:40px;
+
+}
+
+/* stat card */
+
+.sp-stat-card{
+
+background:rgba(255,255,255,.08);
+
+backdrop-filter:blur(10px);
+
+border-radius:18px;
+
+padding:40px 20px;
+
+transition:.4s;
+
+border:1px solid rgba(255,255,255,.15);
+
+position:relative;
+
+height:100%;
+
+}
+
+/* gradient border */
+
+.sp-stat-card::before{
+
+content:"";
+
+position:absolute;
+
+inset:0;
+
+border-radius:18px;
+
+padding:1px;
+
+background:linear-gradient(135deg,#f9a826,#ffffff,#f9a826);
+
+-webkit-mask:
+linear-gradient(#fff 0 0) content-box,
+linear-gradient(#fff 0 0);
+
+-webkit-mask-composite:xor;
+mask-composite:exclude;
+
+}
+
+/* hover animation */
+
+.sp-stat-card:hover{
+
+transform:translateY(-10px) scale(1.03);
+
+background:rgba(255,255,255,.18);
+
+box-shadow:0 25px 60px rgba(0,0,0,.4);
+
+}
+
+/* icon */
+
+.sp-stat-icon{
+
+width:65px;
+height:65px;
+
+background:#f9a826;
+
+border-radius:50%;
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+margin:0 auto 15px;
+
+font-size:24px;
+
+color:white;
+
+box-shadow:0 8px 25px rgba(0,0,0,.3);
+
+}
+
+/* numbers */
+
+.sp-stat-card h2{
+
+font-size:40px;
+
+font-weight:700;
+
+margin-bottom:5px;
+
+background:transparent !important;
+
+}
+
+/* text */
+
+.sp-stat-card span{
+
+opacity:.9;
+
+background:transparent !important;
+
+}
+
+/* ===============================
+        DARK MODE FIX
+================================ */
+
+body.dark-mode .sp-stats-section{
+
+background:linear-gradient(135deg,#0d1a33,#15264a);
+
+}
+
+body.dark-mode .sp-stat-card{
+
+background:rgba(255,255,255,.05);
+
+border:1px solid rgba(255,255,255,.08);
+
+}
+
+/* remove any text boxes */
+
+body.dark-mode .sp-stat-card h2,
+body.dark-mode .sp-stat-card span{
+
+background:transparent !important;
+
+padding:0 !important;
+
+}
+
+/* ===============================
+        MOBILE
+================================ */
+
+@media (max-width:768px){
+
+.sp-stats-section{
+
+padding:80px 20px;
+
+}
+
+.sp-stat-card h2{
+
+font-size:32px;
+
+}
+
+}
+
+
+
+/* ===============================
+        PREMIUM ABOUT SECTION
+================================ */
+
+.sp-about-section{
+
+padding:110px 0;
+
+background:#f4f7fc;
+
+position:relative;
+
+overflow:hidden;
+
+}
+
+
+/* floating gradient light */
+
+.sp-about-section::before{
+
+content:"";
+
+position:absolute;
+
+width:350px;
+height:350px;
+
+background:rgba(249,168,38,.25);
+
+border-radius:50%;
+
+left:-120px;
+bottom:-120px;
+
+filter:blur(120px);
+
+}
+
+
+/* spacing */
+
+.sp-about-row{
+
+row-gap:40px;
+
+}
+
+
+/* image */
+
+.sp-about-image{
+
+border-radius:20px;
+
+overflow:hidden;
+
+box-shadow:0 20px 60px rgba(0,0,0,.15);
+
+transition:.4s;
+
+}
+
+.sp-about-image img{
+
+width:100%;
+
+display:block;
+
+transition:.4s;
+
+}
+
+.sp-about-image:hover img{
+
+transform:scale(1.05);
+
+}
+
+
+/* glass card */
+
+.sp-about-card{
+
+background:white;
+
+padding:45px;
+
+border-radius:20px;
+
+box-shadow:0 15px 50px rgba(0,0,0,.08);
+
+position:relative;
+
+transition:.4s;
+
+}
+
+
+/* gradient accent */
+
+.sp-about-card::before{
+
+content:"";
+
+position:absolute;
+
+top:0;
+left:0;
+
+width:5px;
+height:100%;
+
+background:linear-gradient(#2f4a8a,#f9a826);
+
+border-radius:10px;
+
+}
+
+
+/* hover effect */
+
+.sp-about-card:hover{
+
+transform:translateY(-8px);
+
+box-shadow:0 25px 70px rgba(0,0,0,.15);
+
+}
+
+
+/* title */
+
+.sp-about-card h2{
+
+font-weight:700;
+
+margin-bottom:15px;
+
+background:transparent !important;
+
+}
+
+
+/* text */
+
+.sp-about-card p{
+
+color:#555;
+
+line-height:1.7;
+
+background:transparent !important;
+
+}
+
+
+/* list */
+
+.sp-about-list{
+
+list-style:none;
+
+padding:0;
+
+margin-top:20px;
+
+}
+
+.sp-about-list li{
+
+margin-bottom:10px;
+
+font-size:15px;
+
+}
+
+.sp-about-list i{
+
+color:#f9a826;
+
+margin-right:8px;
+
+}
+
+
+/* button */
+
+.sp-about-btn{
+
+display:inline-block;
+
+margin-top:20px;
+
+background:#2f4a8a;
+
+color:white;
+
+padding:10px 24px;
+
+border-radius:30px;
+
+text-decoration:none;
+
+transition:.3s;
+
+}
+
+.sp-about-btn:hover{
+
+background:#f9a826;
+
+color:#121212;
+
+}
+
+
+/* ===============================
+        DARK MODE
+================================ */
+
+body.dark-mode .sp-about-section{
+
+background:#0f172a;
+
+}
+
+body.dark-mode .sp-about-card{
+
+background:#1e293b;
+
+color:white;
+
+box-shadow:0 20px 50px rgba(0,0,0,.5);
+
+}
+
+body.dark-mode .sp-about-card p{
+
+color:rgba(255,255,255,.8);
+
+}
+
+body.dark-mode .sp-about-card h2{
+
+color:white;
+
+}
+
+
+/* ===============================
+        MOBILE
+================================ */
+
+@media (max-width:768px){
+
+.sp-about-section{
+
+padding:80px 20px;
+
+}
+
+.sp-about-card{
+
+padding:30px;
+
+}
+
+}
+
+/* ===============================
+   REMOVE DARK BOX AROUND LIST
+================================ */
+
+/* Remove background from list container */
+body.dark-mode .sp-about-list{
+  background: transparent !important;
+  padding: 0 !important;
+}
+
+/* Remove background from list items */
+body.dark-mode .sp-about-list li{
+  background: transparent !important;
+}
+
+/* Remove background from icons */
+body.dark-mode .sp-about-list i{
+  background: transparent !important;
+}
+
+/* Remove background from text elements */
+body.dark-mode .sp-about-card h2,
+body.dark-mode .sp-about-card p{
+  background: transparent !important;
+}
+
+
+/* Remove background box in footer about section */
+
+.footer-about{
+  background:none !important;
+  border-radius:0 !important;
+  overflow:visible !important;
+}
+
+.footer-about::before{
+  display:none !important;
+}
+
+.footer-banner-content{
+  padding:0 !important;
+}
+</style>
+
+</head>
+
+<body>
+<div class="site-wrap">
+
+    <div class="site-mobile-menu site-navbar-target">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div>
+   
+    
+<header class="custom-navbar" role="banner">
+  <div class="container">
+    <div class="row align-items-center">
+      
+      <!-- Logo -->
+      <div class="col-6 col-xl-2">
+        <a href="index.html" class="custom-logo">SpeakPro</a>
+      </div>
+
+      <!-- Desktop Menu -->
+      <div class="col-6 col-xl-10 d-none d-xl-block">
+        <nav class="custom-nav">
+          <ul class="custom-menu d-flex align-items-center justify-content-end mb-0">
+            <li><a href="../index.html" class="custom-link">Home</a></li>
+<li><a href="../index2.html" class="custom-link">Home2</a></li>            
+<li><a href="services.html" class="custom-link " class="custom-link">Courses</a></li>
+            <li><a href="about.html" class="custom-link active">About Us</a></li>
+            <li><a href="contact.html" class="custom-link">Contact</a></li>
+            <li><a href="appointment.html" class="custom-link">Appointment</a></li>
+            <li><a href="dashboard.html" class="custom-link">Dashboard</a></li>
+            <li>
+  <a href="login.html" 
+     class="custom-login"
+     style="background:#f9a826; 
+            color:#ffffff; 
+            padding:8px 18px; 
+            border-radius:30px; 
+            text-decoration:none; 
+            font-weight:600; 
+            display:inline-block;">
+    Login
+  </a>
+</li>
+            <li class="d-flex align-items-center ms-3">
+              <button class="custom-toggle me-2" id="themeToggle" title="Toggle Theme">
+                <i class="fa-solid fa-moon"></i>
+              </button>
+              <button class="custom-toggle" id="rtlToggle" title="Toggle RTL">
+                <i class="fa-solid fa-language"></i>
+              </button>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <!-- Mobile Hamburger -->
+      <div class="d-xl-none col-6 text-end">
+        <button class="hamburger-btn" onclick="toggleMobileMenu()">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- Mobile Menu -->
+<div class="custom-mobile-menu" id="mobileMenu">
+  <div class="custom-mobile-header">
+    <button class="close-btn" onclick="toggleMobileMenu()">&times;</button>
+  </div>
+  <ul class="custom-mobile-list">
+    <li><a href="../index.html">Home</a></li>
+    <li><a href="../index2.html">Home2</a></li>
+
+    <li><a href="services.html">Courses</a></li>
+    <li><a href="about.html" class="custom-link active">About Us</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="appointment.html">Appointment</a></li>
+    <li><a href="dashboard.html">Dashboard</a></li>
+    <li>
+  <a href="login.html" 
+     style="display:block;
+            background:#f9a826;
+            color:#ffffff;
+            padding:10px 15px;
+            border-radius:8px;
+            text-align:center;
+            font-weight:600;
+            text-decoration:none;
+            margin:10px 15px;">
+    Login
+  </a>
+</li><div class="custom-mobile-toggles"> <button class="custom-toggle me-2" id="themeToggleMobile" title="Toggle Theme"> <i class="fa-solid fa-moon"></i> </button> <button class="custom-toggle" id="rtlToggleMobile" title="Toggle RTL"> <i class="fa-solid fa-language"></i> </button> </div>
+  </ul>
+</div>
+
+<!-- Hero -->
+
+<!-- ABOUT HERO -->
+<section class="about-hero-banner">
+  <div class="about-hero-overlay"></div>
+
+  <div class="container">
+    <div class="about-hero-content text-center">
+      <h1>About SpeakPro</h1>
+      <p>Empowering confident speakers and fearless leaders.</p>
+    </div>
+  </div>
+</section>
+
+<!-- About Content -->
+<!-- ===============================
+        WHO WE ARE SECTION
+================================ -->
+
+<section class="sp-about-section">
+
+<div class="container">
+
+<div class="row align-items-center sp-about-row">
+
+
+<!-- Image -->
+<div class="col-lg-6 wow animate__animated animate__fadeInLeft">
+
+<div class="sp-about-image">
+
+<img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f"
+alt="SpeakPro Coaching">
+
+</div>
+
+</div>
+
+
+<!-- Content -->
+<div class="col-lg-6 wow animate__animated animate__fadeInRight">
+
+<div class="sp-about-card">
+
+<h2>Who We Are</h2>
+
+<p>
+SpeakPro is a professional communication coaching platform helping
+individuals overcome fear, build confidence, and speak with impact.
+</p>
+
+<p>
+Our mentors use proven frameworks and personalized coaching to ensure
+measurable improvement in public speaking, interviews, and leadership
+communication.
+</p>
+
+<ul class="sp-about-list">
+
+<li><i class="fas fa-check-circle"></i> Confidence building training</li>
+
+<li><i class="fas fa-check-circle"></i> Corporate communication coaching</li>
+
+<li><i class="fas fa-check-circle"></i> Interview & presentation mastery</li>
+
+</ul>
+
+<a href="services.html" class="sp-about-btn">
+Explore Our Courses
+</a>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</section>
+<!-- Vision & Mission -->
+<!-- ==============================
+   VISION & MISSION WOW SECTION
+================================= -->
+
+<section class="vm-wow-section">
+
+<div class="container">
+
+<div class="text-center mb-5 wow animate__animated animate__fadeInUp">
+<h2 class="vm-title">Our Vision & Mission</h2>
+<p class="vm-subtitle">
+We empower individuals to communicate with confidence and influence.
+</p>
+</div>
+
+<div class="row vm-row">
+
+<!-- Vision Card -->
+<div class="col-lg-6 wow animate__animated animate__fadeInLeft">
+
+<div class="vm-wow-card">
+
+<div class="vm-icon-circle">
+<i class="fas fa-eye"></i>
+</div>
+
+<h3>Our Vision</h3>
+
+<p>
+To empower millions of people to speak confidently, influence audiences,
+and lead fearlessly in every stage of life.
+</p>
+
+</div>
+
+</div>
+
+
+<!-- Mission Card -->
+<div class="col-lg-6 wow animate__animated animate__fadeInRight">
+
+<div class="vm-wow-card">
+
+<div class="vm-icon-circle">
+<i class="fas fa-bullseye"></i>
+</div>
+
+<h3>Our Mission</h3>
+
+<p>
+To provide world-class communication coaching that transforms careers,
+boosts confidence, and creates powerful speakers worldwide.
+</p>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</section>
+
+<!-- Team -->
+<!-- ==============================
+        PREMIUM TEAM SECTION
+================================= -->
+
+<section class="sp-team-section">
+
+<div class="container">
+
+<div class="text-center mb-5">
+<h2 class="sp-team-title">Meet Our Coaches</h2>
+<p class="sp-team-subtitle">
+Our expert mentors help you master public speaking and communication.
+</p>
+</div>
+
+<div class="row sp-team-row">
+
+<!-- Coach 1 -->
+<div class="col-lg-4 col-md-6">
+
+<div class="sp-team-card">
+
+<img src="https://randomuser.me/api/portraits/men/32.jpg" class="sp-team-img">
+
+<h4>Arjun Rao</h4>
+
+<span>Public Speaking Expert</span>
+
+<div class="sp-team-social">
+
+<a href="#"><i class="fab fa-linkedin"></i></a>
+<a href="#"><i class="fab fa-twitter"></i></a>
+<a href="#"><i class="fab fa-instagram"></i></a>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- Coach 2 -->
+<div class="col-lg-4 col-md-6">
+
+<div class="sp-team-card">
+
+<img src="https://randomuser.me/api/portraits/women/44.jpg" class="sp-team-img">
+
+<h4>Meera Sharma</h4>
+
+<span>Corporate Trainer</span>
+
+<div class="sp-team-social">
+
+<a href="#"><i class="fab fa-linkedin"></i></a>
+<a href="#"><i class="fab fa-twitter"></i></a>
+<a href="#"><i class="fab fa-instagram"></i></a>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- Coach 3 -->
+<div class="col-lg-4 col-md-6">
+
+<div class="sp-team-card">
+
+<img src="https://randomuser.me/api/portraits/men/76.jpg" class="sp-team-img">
+
+<h4>Rahul Verma</h4>
+
+<span>Interview Coach</span>
+
+<div class="sp-team-social">
+
+<a href="#"><i class="fab fa-linkedin"></i></a>
+<a href="#"><i class="fab fa-twitter"></i></a>
+<a href="#"><i class="fab fa-instagram"></i></a>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- CTA -->
+<!-- Why Section -->
+<!-- =========================
+   WHY CHOOSE SPEAKPRO
+========================= -->
+
+<section class="sp-why-section">
+
+<div class="container">
+
+<div class="text-center mb-5 wow animate__animated animate__fadeInUp">
+
+<h2 class="sp-why-title">Why Choose SpeakPro?</h2>
+
+<p class="sp-why-subtitle">
+We don’t just teach speaking. We transform personalities.
+</p>
+
+</div>
+
+
+<div class="row sp-why-row">
+
+
+<!-- Card 1 -->
+<div class="col-lg-4 col-md-6 wow animate__animated animate__fadeInUp">
+
+<div class="sp-why-card">
+
+<div class="sp-why-icon">
+<i class="fas fa-user-graduate"></i>
+</div>
+
+<h4>Personalized Coaching</h4>
+
+<p>
+Every session is tailored to your goals and growth pace
+so you gain confidence faster.
+</p>
+
+</div>
+
+</div>
+
+
+<!-- Card 2 -->
+<div class="col-lg-4 col-md-6 wow animate__animated animate__fadeInUp" data-wow-delay="0.2s">
+
+<div class="sp-why-card">
+
+<div class="sp-why-icon">
+<i class="fas fa-chart-line"></i>
+</div>
+
+<h4>Proven Frameworks</h4>
+
+<p>
+Structured speaking methods that help professionals
+deliver powerful and memorable presentations.
+</p>
+
+</div>
+
+</div>
+
+
+<!-- Card 3 -->
+<div class="col-lg-4 col-md-6 wow animate__animated animate__fadeInUp" data-wow-delay="0.4s">
+
+<div class="sp-why-card">
+
+<div class="sp-why-icon">
+<i class="fas fa-award"></i>
+</div>
+
+<h4>Real Results</h4>
+
+<p>
+Hundreds of professionals improved leadership,
+communication, and public speaking confidence.
+</p>
+
+</div>
+
+</div>
+
+
+</div>
+</div>
+</section>
+
+<!-- Stats Section -->
+<!-- ===============================
+        SPEAKPRO STATS SECTION
+================================ -->
+
+<section class="sp-stats-section">
+
+<div class="container">
+
+<div class="row sp-stats-row text-center">
+
+
+<div class="col-lg-3 col-md-6">
+
+<div class="sp-stat-card">
+
+<div class="sp-stat-icon">
+<i class="fas fa-user-graduate"></i>
+</div>
+
+<h2 class="sp-counter">500</h2>
+<span>Students Trained</span>
+
+</div>
+
+</div>
+
+
+<div class="col-lg-3 col-md-6">
+
+<div class="sp-stat-card">
+
+<div class="sp-stat-icon">
+<i class="fas fa-briefcase"></i>
+</div>
+
+<h2 class="sp-counter">100</h2>
+<span>Corporate Workshops</span>
+
+</div>
+
+</div>
+
+
+<div class="col-lg-3 col-md-6">
+
+<div class="sp-stat-card">
+
+<div class="sp-stat-icon">
+<i class="fas fa-clock"></i>
+</div>
+
+<h2 class="sp-counter">5</h2>
+<span>Years Experience</span>
+
+</div>
+
+</div>
+
+
+<div class="col-lg-3 col-md-6">
+
+<div class="sp-stat-card">
+
+<div class="sp-stat-icon">
+<i class="fas fa-star"></i>
+</div>
+
+<h2 class="sp-counter">98</h2>
+<span>Success Rate</span>
+
+</div>
+
+</div>
+
+
+</div>
+</div>
+
+</section>
+<!-- Footer -->
+ <footer class="site-footer">
+  <div class="container">
+    <div class="row">
+
+<div class="col-md-4 mb-4 footer-about">
+  <div class="footer-banner-content">
+    <h4 class="footer-title">About SpeakPro</h4>
+    <p>
+      SpeakPro helps professionals, students, and leaders build powerful 
+      communication skills, overcome stage fear, and deliver impactful speeches 
+      with confidence.
+    </p>
+  </div>
+</div>
+
+      <!-- Quick Links -->
+      <div class="col-md-3 ml-auto mb-4">
+        <h4 class="footer-title">Quick Links</h4>
+        <ul class="footer-links list-unstyled">
+          <li><a href="#about-section">About</a></li>
+          <li><a href="#training-section">Training</a></li>
+          <li><a href="#services-section">Services</a></li>
+          <li><a href="#contact-section">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Social + Newsletter -->
+      <div class="col-md-4 mb-4">
+        <h4 class="footer-title">Connect With Us</h4>
+
+        <div class="social-icons mb-4">
+          <a href="#"><span class="icon-facebook"></span></a>
+          <a href="#"><span class="icon-twitter"></span></a>
+          <a href="#"><span class="icon-instagram"></span></a>
+          <a href="#"><span class="icon-linkedin"></span></a>
+        </div>
+
+        <form class="footer-subscribe">
+          <div class="input-group">
+            <input type="email" class="form-control" placeholder="Enter your email">
+            <div class="input-group-append">
+              <button class="btn btn-primary">Subscribe</button>
+            </div>
+          </div>
+        </form>
+
+      </div>
+    </div>
+
+    <!-- Bottom Line -->
+    <div class="footer-bottom text-center mt-4">
+      <p>© 2026 SpeakPro. All Rights Reserved.</p>
+    </div>
+
+  </div>
+</footer>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function(){
+
+  const themeButtons = [
+    document.getElementById("themeToggle"),
+    document.getElementById("themeToggleMobile")
+  ];
+
+  const rtlButtons = [
+    document.getElementById("rtlToggle"),
+    document.getElementById("rtlToggleMobile")
+  ];
+
+  /* ---------- LOAD SAVED THEME ---------- */
+  if(localStorage.getItem("theme") === "dark"){
+    document.body.classList.add("dark-mode");
+    themeButtons.forEach(btn => {
+      if(btn) btn.innerHTML = '<i class="fas fa-sun"></i>';
+    });
+  }
+
+  /* ---------- LOAD SAVED RTL ---------- */
+  if(localStorage.getItem("rtl") === "enabled"){
+    document.body.classList.add("rtl");
+    document.documentElement.setAttribute("dir","rtl");
+  }
+
+  /* ---------- THEME TOGGLE ---------- */
+  themeButtons.forEach(btn => {
+    if(!btn) return;
+
+    btn.addEventListener("click", function(){
+
+      document.body.classList.toggle("dark-mode");
+
+      if(document.body.classList.contains("dark-mode")){
+        localStorage.setItem("theme","dark");
+        themeButtons.forEach(b => {
+          if(b) b.innerHTML = '<i class="fas fa-sun"></i>';
+        });
+      } else {
+        localStorage.setItem("theme","light");
+        themeButtons.forEach(b => {
+          if(b) b.innerHTML = '<i class="fas fa-moon"></i>';
+        });
+      }
+
+    });
+  });
+
+  /* ---------- RTL TOGGLE ---------- */
+  rtlButtons.forEach(btn => {
+    if(!btn) return;
+
+    btn.addEventListener("click", function(){
+
+      document.body.classList.toggle("rtl");
+
+      if(document.body.classList.contains("rtl")){
+        document.documentElement.setAttribute("dir","rtl");
+        localStorage.setItem("rtl","enabled");
+      } else {
+        document.documentElement.setAttribute("dir","ltr");
+        localStorage.setItem("rtl","disabled");
+      }
+
+    });
+  });
+
+});
+</script>
+<script id="fix-mobile-nav">
+document.addEventListener("DOMContentLoaded", function () {
+
+  document.querySelectorAll(".site-mobile-menu a").forEach(link => {
+
+    link.addEventListener("click", function(e) {
+
+      const href = this.getAttribute("href");
+
+      // If link is another page → allow redirect
+      if (href.includes(".html")) {
+        window.location.href = href;
+      }
+
+    });
+
+  });
+
+});
+</script>
+<script>
+function toggleMobileMenu() {
+  document.getElementById('mobileMenu').classList.toggle('open');
+}
+</script>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1000,
+    once: true
+  });
+</script>
+
+<script>
+new WOW().init();
+</script>
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+
+<script>
+new WOW().init();
+</script>
+</body>
+</html>

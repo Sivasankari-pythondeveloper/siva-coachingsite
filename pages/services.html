@@ -1,0 +1,1303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Services | SpeakPro</title>
+<link rel="icon" type="image/png" href="../assets/images/mic.png">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="../assets/css/navbar.css">
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+ <link rel="stylesheet" href="../assets/fonts/icomoon/style.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/css/jquery-ui.css">
+    <link rel="stylesheet" href="../assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="../assets/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="../assets/css/owl.theme.default.min.css">
+
+    <link rel="stylesheet" href="../assets/css/jquery.fancybox.min.css">
+
+    <link rel="stylesheet" href="../assets/css/bootstrap-datepicker.css">
+
+    <link rel="stylesheet" href="../assets/fonts/flaticon/font/flaticon.css">
+
+    <link rel="stylesheet" href="../assets/css/aos.css">
+
+    <link rel="stylesheet" href="../assets/css/style.css">
+   
+
+  <style>
+/* ===============================
+   GLOBAL STYLES
+================================= */
+.course-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.course-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+.course-card .icon {
+  background: rgba(0,0,0,0.05);
+  border-radius: 50%;
+  padding: 20px;
+  display: inline-block;
+}
+.custom-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+  background: #2f4a8a; /* your primary color */
+  transition: all 0.3s ease;
+}
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #ffffff;
+  color: #222222;
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+.login-text {
+  font-weight: 600;        /* make it bold */
+  color: #fff;             /* white text on dark navbar */
+  text-transform: uppercase; /* optional: all caps */
+  letter-spacing: 0.5px;   /* optional: spacing for premium look */
+}
+
+.login-text:hover {
+  color: #f9a826;          /* orange hover effect */
+  text-decoration: none;   /* remove underline */
+}
+
+
+section {
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+/* ===============================
+   NAVBAR
+================================= */
+
+.navbar {
+  background: #2f4a8a;
+  padding: 15px 0;
+  transition: 0.4s ease;
+}
+
+.navbar-brand {
+  color: #fff;
+  font-weight: 700;
+  font-size: 26px;
+}
+
+.nav-link {
+  color: #fff;
+  margin-left: 20px;
+  transition: 0.3s;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: #f9a826 !important;
+  font-weight: 600;
+}
+
+/* ===============================
+   HERO SECTION
+================================= */
+
+.services-hero {
+  background: #f4f7fc;
+  padding: 80px 0;
+  text-align: center;
+  transition: 0.4s ease;
+}
+
+.services-hero h1 {
+  font-weight: 700;
+  color: #2f4a8a;
+}
+
+/* ===============================
+   SERVICE CARDS
+================================= */
+
+.service-card {
+  background: #ffffff;
+  padding: 40px 30px;
+  border-radius: 15px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+  transition: 0.4s ease;
+  height: 100%;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 25px 50px rgba(0,0,0,0.12);
+}
+
+.service-icon img {
+  width: 100%;         /* fill the width of the card container */
+  max-width: 120px;    /* optional: limit max size */
+  height: 120px;       /* fixed height for uniformity */
+  object-fit: cover;   /* crop/scale image without distortion */
+  border-radius: 15px; /* rounded corners for nice look */
+  margin-bottom: 20px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ===============================
+   WHY SECTION
+================================= */
+
+.why-section {
+  background: #2f4a8a;
+  color: white;
+  padding: 80px 0;
+  transition: 0.4s ease;
+}
+
+/* ===============================
+   CTA SECTION
+================================= */
+
+.cta-section {
+  padding: 70px 0;
+  text-align: center;
+  background: #f9a826;
+  color: #ffffff;
+  transition: 0.4s ease;
+}
+
+.cta-btn {
+  background: #2f4a8a;
+  color: #ffffff;
+  padding: 12px 30px;
+  border-radius: 30px;
+  transition: 0.3s ease;
+  border: none;
+}
+
+.cta-btn:hover {
+  background: #1e3569;
+  color: #ffffff;
+}
+
+/* ===============================
+   FOOTER
+================================= */
+
+/* ===============================
+   PREMIUM FOOTER FIX
+================================= */
+
+.site-footer {
+  background: #0d2c54;
+  color: #ffffff;
+  padding: 70px 0 30px;
+}
+
+.site-footer .row {
+  align-items: flex-start;
+}
+
+/* Footer Titles */
+.site-footer .footer-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 25px;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.site-footer .footer-title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 45px;
+  height: 3px;
+  background: #f9a826;
+  border-radius: 3px;
+}
+
+/* Paragraph */
+.site-footer p {
+  color: rgba(255,255,255,0.7);
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+/* Links */
+.site-footer .footer-links li {
+  margin-bottom: 10px;
+}
+
+.site-footer .footer-links a {
+  color: rgba(255,255,255,0.75);
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.site-footer .footer-links a:hover {
+  color: #f9a826;
+  padding-left: 5px;
+}
+
+/* Social Icons */
+.site-footer .social-icons a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: rgba(255,255,255,0.1);
+  color: #fff;
+  border-radius: 50%;
+  margin-right: 10px;
+  transition: 0.3s ease;
+}
+
+.site-footer .social-icons a:hover {
+  background: #f9a826;
+  color: #0d2c54;
+  transform: translateY(-3px);
+}
+
+/* Newsletter */
+.site-footer .footer-subscribe .form-control {
+  border-radius: 30px 0 0 30px;
+  border: none;
+  padding: 10px 20px;
+}
+
+.site-footer .footer-subscribe .btn {
+  border-radius: 0 30px 30px 0;
+  background: #f9a826;
+  border: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.site-footer .footer-subscribe .btn:hover {
+  background: #ffb347;
+}
+
+/* Bottom Section */
+.site-footer .footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.1);
+  padding-top: 20px;
+  margin-top: 40px;
+}
+
+.site-footer .footer-bottom p {
+  margin: 0;
+  font-size: 13px;
+  color: rgba(255,255,255,0.6);
+}
+
+/* Fix column spacing */
+.site-footer .col-md-4,
+.site-footer .col-md-3 {
+  margin-bottom: 30px;
+}
+
+@media (max-width: 768px) {
+
+  .site-footer {
+    text-align: left;
+  }
+
+  .site-footer .footer-title::after {
+    left: 0;
+    transform: none;
+  }
+
+  .site-footer .social-icons {
+    justify-content: flex-start;
+  }
+
+  .site-footer .social-icons a {
+    margin-right: 10px;
+    margin-left: 0;
+  }
+
+}
+/* ===============================
+   TOGGLE BUTTON STYLE
+================================= */
+.toggle-btn {
+  background: transparent;   /* no background */
+  border: none;              /* remove default border */
+  color: #fff;               /* white icons on dark navbar */
+  font-size: 1.2rem;         /* make icons visible */
+  cursor: pointer;
+  padding: 6px;
+  transition: color 0.3s ease;
+}
+
+.toggle-btn:hover {
+  color: #f9a826;            /* orange hover effect */
+}
+
+
+/* Dark Mode Toggle Style */
+body.dark-mode .toggle-btn {
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+}
+
+body.dark-mode .toggle-btn:hover {
+  background: #f9a826;
+  color: #121212;
+}
+
+/* ===============================
+   DARK MODE
+================================= */
+
+body.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+/* Navbar Dark */
+body.dark-mode .navbar {
+  background: #0d1a33;
+}
+
+/* Hero Dark */
+body.dark-mode .services-hero {
+  background: #1b2645;
+}
+
+body.dark-mode .services-hero h1 {
+  color: #ffffff;
+}
+
+/* Service Cards Dark */
+body.dark-mode .service-card {
+  background: #1e2a4a;
+  color: #ffffff;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+}
+
+body.dark-mode .service-card:hover {
+  background: #f9a826;
+  color: #121212;
+  font-weight: 600;
+}
+
+/* Why Section Dark */
+body.dark-mode .why-section {
+  background: #0d1a33;
+  color: #ffffff;
+}
+
+/* CTA Dark */
+body.dark-mode .cta-section {
+  background: #f9a826;
+  color: #121212;
+}
+
+body.dark-mode .cta-btn {
+  background: #121212;
+  color: #ffffff;
+}
+
+body.dark-mode .cta-btn:hover {
+  background: #000000;
+}
+
+/* Footer Dark */
+body.dark-mode footer {
+  background: #000814;
+}
+
+/* Fix Bootstrap White Areas */
+
+
+/* ===============================
+   RTL SUPPORT
+================================= */
+
+body.rtl {
+  direction: rtl;
+  text-align: right;
+}
+
+/* ===============================
+   COURSES HERO
+================================= */
+
+/* ===============================
+   COURSES HERO (FINAL FIX)
+================================= */
+
+.courses-hero {
+  position: relative;
+  background-image: url('../assets/images/enrollment.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 140px 0;
+  color: #fff;
+  overflow: hidden;
+}
+
+/* Light mode overlay */
+.courses-hero .overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(13, 44, 84, 0.65);
+  z-index: 1;
+}
+
+/* Content above overlay */
+.courses-hero .container {
+  position: relative;
+  z-index: 2;
+}
+
+/* Dark mode — ONLY change overlay */
+body.dark-mode .courses-hero .overlay {
+  background: rgba(0, 0, 0, 0.35);
+}
+.courses-hero h1 {
+  font-size: 42px;
+  font-weight: 700;
+}
+
+.courses-hero p {
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+/* ===============================
+   COURSE CARDS
+================================= */
+
+.courses-section {
+  padding: 100px 0;   /* more breathing space */
+}
+.courses-section .row {
+  row-gap: 40px;   /* vertical space between rows */
+}
+.course-card {
+  background: #ffffff;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+  transition: all 0.4s ease;
+  height: 100%;
+  display: flex;               /* IMPORTANT */
+  flex-direction: column;      /* IMPORTANT */
+}
+
+.course-card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 25px 60px rgba(0,0,0,0.18);
+}
+
+.course-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+.course-content {
+  padding: 25px;
+  display: flex;               /* IMPORTANT */
+  flex-direction: column;      /* IMPORTANT */
+  flex: 1;                     /* IMPORTANT */
+}
+
+.course-content h5 {
+  color: #2f4a8a;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.course-content p {
+  font-size: 14px;
+  margin-bottom: 20px;
+  color: #555;
+  flex-grow: 1;
+}
+
+.enroll-btn {
+  background: #2f4a8a;
+  color: #fff;
+  padding: 10px 25px;
+  border-radius: 30px;
+  transition: 0.3s;
+margin-top: auto;
+  align-self: center;
+}
+
+.enroll-btn:hover {
+  background: #f9a826;
+  color: #fff;
+}
+
+/* Dark Mode */
+body.dark-mode .course-card {
+  background: #1e2a4a;
+  color: #fff;
+}
+
+body.dark-mode .course-content h5 {
+  color: #f9a826;
+}
+
+body.dark-mode .course-content p {
+  color: #ccc;
+}
+
+
+
+/* DARK MODE HERO FIX */
+/* DARK MODE HERO FIX */
+
+/* ===============================
+   MOBILE SLIDE MENU
+================================= */
+
+@media (max-width: 992px) {
+
+  .mobile-menu {
+    position: fixed;
+    top: 0;
+    right: -260px;
+    width: 260px;
+    height: 100vh;
+    background: #2f4a8a;
+    padding-top: 80px;
+    transition: 0.4s ease;
+    z-index: 2000;
+  }
+
+  .mobile-menu.show {
+    right: 0;
+  }
+
+  .navbar-nav {
+    flex-direction: column;
+    align-items: start;
+    padding-left: 20px;
+  }
+
+  .nav-link {
+    margin: 10px 0;
+  }
+}
+
+.navbar-toggler{
+  border: none;
+}
+
+.navbar-toggler:focus{
+  box-shadow: none;
+}
+
+
+/* ===============================
+   MOBILE SPACING FIX
+================================= */
+@media (max-width: 768px) {
+
+  /* Add space above section */
+  #courses {
+    padding-top: 70px !important;
+    padding-bottom: 70px !important;
+  }
+
+  /* Extra space between cards */
+  #courses .col-md-4 {
+    margin-bottom: 25px;
+  }
+
+  /* Better side spacing */
+  #courses .container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+}
+
+/* ===============================
+   DARK MODE - POPULAR COURSES
+================================= */
+body.dark-mode #courses {
+  background: #121c33 !important;
+}
+
+body.dark-mode #courses h2 {
+  color: #ffffff;
+}
+
+body.dark-mode #courses p {
+  color: rgba(255,255,255,0.7);
+}
+body.dark-mode .courses-hero .overlay {
+  background: rgba(13, 44, 84, 0.65);   /* slightly darker */
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+
+/* FORCE IMAGE IN DARK MODE */
+body.dark-mode .courses-hero {
+  background-image: url('../assets/images/enrollment.jpg') !important;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* ===============================
+   PREMIUM COURSES SECTION
+================================= */
+
+.premium-courses-section {
+  padding: 120px 0;   /* TOP + BOTTOM SPACE */
+  background: linear-gradient(180deg, #f8f9fc, #eef2f7);
+  transition: all 0.4s ease;
+}
+
+/* Section Heading */
+.premium-courses-section h2 {
+  font-size: 38px;
+  color: #1b2645;
+}
+
+.premium-courses-section p {
+  font-size: 16px;
+}
+
+/* Premium Card */
+.premium-courses-section .course-card {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 40px 30px;
+  transition: all 0.4s ease;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+  border: 1px solid rgba(0,0,0,0.03);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Hover Effect */
+.premium-courses-section .course-card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 25px 60px rgba(0,0,0,0.15);
+}
+
+/* Icon Circle */
+.premium-courses-section .icon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 20px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #2f4a8a, #4f6edc);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 28px;
+  transition: 0.4s;
+}
+
+.premium-courses-section .course-card:hover .icon {
+  transform: rotate(8deg) scale(1.1);
+}
+
+/* Button Premium */
+.premium-courses-section .btn {
+  margin-top: auto;
+  border-radius: 30px;
+  padding: 10px 25px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.premium-courses-section .btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* Row spacing */
+.premium-courses-section .row {
+  row-gap: 40px;
+}
+
+/* ===============================
+   DARK MODE
+================================= */
+
+body.dark-mode .premium-courses-section {
+  background: linear-gradient(180deg, #0f172a, #121c33);
+}
+
+body.dark-mode .premium-courses-section h2 {
+  color: #ffffff;
+}
+
+body.dark-mode .premium-courses-section p {
+  color: rgba(255,255,255,0.7);
+}
+
+body.dark-mode .premium-courses-section .course-card {
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+}
+
+body.dark-mode .premium-courses-section .course-card:hover {
+  background: rgba(255,255,255,0.08);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .premium-courses-section {
+    padding: 90px 20px;
+  }
+
+  .premium-courses-section h2 {
+    font-size: 28px;
+  }
+}
+
+/* =================================
+   FIX DARK MODE FOOTER TEXT BOXES
+================================= */
+
+body.dark-mode .site-footer h4,
+body.dark-mode .site-footer p,
+body.dark-mode .site-footer li,
+body.dark-mode .site-footer a,
+body.dark-mode .site-footer span {
+  background: transparent !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+}
+
+/* Remove background blocks from quick links */
+body.dark-mode .site-footer .footer-links li {
+  background: transparent !important;
+}
+
+/* Remove background behind titles */
+body.dark-mode .site-footer .footer-title {
+  background: transparent !important;
+}
+
+/* Remove background from social icon container */
+body.dark-mode .site-footer .social-icons {
+  background: transparent !important;
+}
+
+/* ===============================
+   DARK MODE FOOTER LINK BOX FIX
+================================ */
+
+body.dark-mode .site-footer .footer-links li,
+body.dark-mode .site-footer .footer-links li a {
+  background: transparent !important;
+  box-shadow: none !important;
+  border: none !important;
+  padding-left: 0 !important;
+}
+
+/* also remove hover background */
+body.dark-mode .site-footer .footer-links li a:hover {
+  background: transparent !important;
+}
+/* ===============================
+   FIX FOOTER QUICK LINKS BOX
+================================= */
+
+.site-footer .footer-links {
+  padding: 0;
+  margin: 0;
+}
+
+.site-footer .footer-links li {
+  list-style: none;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 4px 0 !important;
+}
+
+.site-footer .footer-links li a {
+  display: inline-block;
+  color: rgba(255,255,255,0.75);
+  text-decoration: none;
+  background: transparent !important;
+  padding: 0 !important;
+}
+
+.site-footer .footer-links li a:hover {
+  color: #f9a826;
+  padding-left: 6px;
+}
+
+/* Dark mode fix */
+body.dark-mode .site-footer .footer-links li,
+body.dark-mode .site-footer .footer-links li a{
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+
+/* ===============================
+   FORCE REMOVE BOX FROM QUICK LINKS
+================================= */
+
+.site-footer .footer-links,
+.site-footer .footer-links li,
+.site-footer .footer-links li a{
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.site-footer .footer-links li{
+  list-style: none;
+  padding: 4px 0 !important;
+  display: block;
+}
+
+.site-footer .footer-links li a{
+  display: inline;
+  color: rgba(255,255,255,0.75);
+  text-decoration: none;
+}
+
+.site-footer .footer-links li a:hover{
+  color:#f9a826;
+  padding-left:6px;
+}
+
+/* FIX DARK MODE NAVBAR */
+body.dark-mode .custom-navbar{
+  background: #0d1a33 !important;
+  border-bottom: none !important;
+  box-shadow: none !important;
+}
+
+/* remove the blue line */
+body.dark-mode .custom-navbar::after{
+  display:none !important;
+}
+  </style>
+</head>
+
+<body>
+<div class="site-wrap">
+
+    <div class="site-mobile-menu site-navbar-target">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div>
+   
+    
+<header class="custom-navbar" role="banner">
+  <div class="container">
+    <div class="row align-items-center">
+      
+      <!-- Logo -->
+      <div class="col-6 col-xl-2">
+        <a href="index.html" class="custom-logo">SpeakPro</a>
+      </div>
+
+      <!-- Desktop Menu -->
+      <div class="col-6 col-xl-10 d-none d-xl-block">
+        <nav class="custom-nav">
+          <ul class="custom-menu d-flex align-items-center justify-content-end mb-0">
+            <li><a href="../index.html" class="custom-link">Home</a></li>
+<li><a href="../index2.html" class="custom-link">Home2</a></li>            
+<li><a href="services.html" class="custom-link active" >Courses</a></li>
+            <li><a href="about.html" class="custom-link">AboutUs</a></li>
+            <li><a href="contact.html" class="custom-link">Contact</a></li>
+            <li><a href="appointment.html" class="custom-link">Appointment</a></li>
+            <li><a href="dashboard.html" class="custom-link">Dashboard</a></li>
+            <li>
+  <a href="pages/login.html" 
+     class="custom-login"
+     style="background:#f9a826; 
+            color:#ffffff; 
+            padding:8px 18px; 
+            border-radius:30px; 
+            text-decoration:none; 
+            font-weight:600; 
+            display:inline-block;">
+    Login
+  </a>
+</li>
+            <li class="d-flex align-items-center ms-3">
+              <button class="custom-toggle me-2" id="themeToggle" title="Toggle Theme">
+                <i class="fa-solid fa-moon"></i>
+              </button>
+              <button class="custom-toggle" id="rtlToggle" title="Toggle RTL">
+                <i class="fa-solid fa-language"></i>
+              </button>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <!-- Mobile Hamburger -->
+      <div class="d-xl-none col-6 text-end">
+        <button class="hamburger-btn" onclick="toggleMobileMenu()">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- Mobile Menu -->
+<div class="custom-mobile-menu" id="mobileMenu">
+  <div class="custom-mobile-header">
+    <button class="close-btn" onclick="toggleMobileMenu()">&times;</button>
+  </div>
+  <ul class="custom-mobile-list">
+    <li><a href="../index.html">Home</a></li>
+    <li><a href="../index2.html">Home2</a></li>
+
+    <li><a href="services.html" class="custom-link active">Courses</a></li>
+    <li><a href="about.html">About Us</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="appointment.html">Appointment</a></li>
+    <li><a href="dashboard.html">Dashboard</a></li>
+    <li>
+  <a href="login.html" 
+     style="display:block;
+            background:#f9a826;
+            color:#ffffff;
+            padding:10px 15px;
+            border-radius:8px;
+            text-align:center;
+            font-weight:600;
+            text-decoration:none;
+            margin:10px 15px;">
+    Login
+  </a>
+</li>
+<div class="custom-mobile-toggles"> <button class="custom-toggle me-2" id="themeToggleMobile" title="Toggle Theme"> <i class="fa-solid fa-moon"></i> </button> <button class="custom-toggle" id="rtlToggleMobile" title="Toggle RTL"> <i class="fa-solid fa-language"></i> </button> </div>
+  </ul>
+</div>
+<!-- Hero -->
+<section class="courses-hero">
+  <div class="overlay"></div>
+  <div class="container text-center hero-content">
+    <h1 data-aos="fade-up">Professional Public Speaking Courses</h1>
+    <p data-aos="fade-up" data-aos-delay="200">
+      Transform your voice. Elevate your presence. Lead with confidence.
+    </p>
+  </div>
+</section>
+
+<section class="courses-section py-5">
+  <div class="container">
+    <div class="row g-4">
+
+      <!-- Course 1 -->
+      <div class="col-md-4" data-aos="fade-up">
+        <div class="course-card">
+          <img src="../assets/images/public-speaking.jpg" alt="">
+          <div class="course-content">
+            <h5>Stage Mastery Program</h5>
+            <p>Overcome stage fear and command attention with powerful delivery techniques.</p>
+            <a href="#" class="btn enroll-btn">Enroll Now</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Course 2 -->
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="150">
+        <div class="course-card">
+          <img src="../assets/images/corporate-communication.jpg" alt="">
+          <div class="course-content">
+            <h5>Corporate Communication Excellence</h5>
+            <p>Master boardroom presentations, leadership messaging, and executive presence.</p>
+            <a href="#" class="btn enroll-btn">Enroll Now</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Course 3 -->
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+        <div class="course-card">
+          <img src="../assets/images/online-coaching.jpg" alt="">
+          <div class="course-content">
+            <h5>Virtual Speaking Confidence</h5>
+            <p>Deliver engaging webinars and online presentations with authority.</p>
+            <a href="#" class="btn enroll-btn">Enroll Now</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Course 4 -->
+      <div class="col-md-4" data-aos="fade-up">
+        <div class="course-card">
+          <img src="../assets/images/group-workshops.jpg" alt="">
+          <div class="course-content">
+            <h5>Storytelling & Persuasion Bootcamp</h5>
+            <p>Learn emotional storytelling frameworks that captivate any audience.</p>
+            <a href="#" class="btn enroll-btn">Enroll Now</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Course 5 -->
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="150">
+        <div class="course-card">
+          <img src="../assets/images/interview-prep.jpg" alt="">
+          <div class="course-content">
+            <h5>Interview & Pitch Masterclass</h5>
+            <p>Speak confidently in interviews, investor pitches, and high-stakes meetings.</p>
+            <a href="#" class="btn enroll-btn">Enroll Now</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Course 6 -->
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+        <div class="course-card">
+          <img src="../assets/images/confidence-building.jpg" alt="">
+          <div class="course-content">
+            <h5>Confidence Accelerator Program</h5>
+            <p>Break limiting beliefs and develop a powerful, persuasive voice.</p>
+            <a href="#" class="btn enroll-btn">Enroll Now</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div><!-- Courses Section -->
+<section id="courses" class="premium-courses-section">  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="fw-bold">Our Popular Courses</h2>
+      <p class="text-muted">Choose from a variety of programs designed to transform your speaking skills.</p>
+    </div>
+
+    <div class="row g-4">
+      <!-- Course 1 -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm border-0 rounded-4 text-center p-4 course-card">
+          <div class="icon mb-3">
+            <i class="fas fa-microphone-alt fa-3x text-primary"></i>
+          </div>
+          <h4 class="fw-bold">Public Speaking Mastery</h4>
+          <p class="text-muted">Overcome stage fear and learn proven techniques to deliver powerful speeches.</p>
+          <a href="#public-speaking" class="btn btn-primary mt-auto">Learn More</a>
+        </div>
+      </div>
+
+      <!-- Course 2 -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm border-0 rounded-4 text-center p-4 course-card">
+          <div class="icon mb-3">
+            <i class="fas fa-users fa-3x text-success"></i>
+          </div>
+          <h4 class="fw-bold">Group Presentation Skills</h4>
+          <p class="text-muted">Collaborate effectively and present with confidence in team settings.</p>
+          <a href="#group-presentation" class="btn btn-success mt-auto">Learn More</a>
+        </div>
+      </div>
+
+      <!-- Course 3 -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm border-0 rounded-4 text-center p-4 course-card">
+          <div class="icon mb-3">
+            <i class="fas fa-video fa-3x text-danger"></i>
+          </div>
+          <h4 class="fw-bold">Virtual Communication</h4>
+          <p class="text-muted">Master online meetings, webinars, and video presentations with impact.</p>
+          <a href="#virtual-communication" class="btn btn-danger mt-auto">Learn More</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Footer -->
+ <footer class="site-footer">
+  <div class="container">
+    <div class="row">
+
+      <!-- About -->
+      <div class="col-md-4 mb-4">
+        <h4 class="footer-title">About SpeakPro</h4>
+        <p>
+          SpeakPro helps professionals, students, and leaders build powerful 
+          communication skills, overcome stage fear, and deliver impactful speeches 
+          with confidence.
+        </p>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="col-md-3 ml-auto mb-4">
+        <h4 class="footer-title">Quick Links</h4>
+        <ul class="footer-links list-unstyled">
+          <li><a href="#about-section">About</a></li>
+          <li><a href="#training-section">Training</a></li>
+          <li><a href="#services-section">Services</a></li>
+          <li><a href="#contact-section">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Social + Newsletter -->
+      <div class="col-md-4 mb-4">
+        <h4 class="footer-title">Connect With Us</h4>
+
+        <div class="social-icons mb-4">
+          <a href="#"><span class="icon-facebook"></span></a>
+          <a href="#"><span class="icon-twitter"></span></a>
+          <a href="#"><span class="icon-instagram"></span></a>
+          <a href="#"><span class="icon-linkedin"></span></a>
+        </div>
+
+        <form class="footer-subscribe">
+          <div class="input-group">
+            <input type="email" class="form-control" placeholder="Enter your email">
+            <div class="input-group-append">
+              <button class="btn btn-primary">Subscribe</button>
+            </div>
+          </div>
+        </form>
+
+      </div>
+    </div>
+
+    <!-- Bottom Line -->
+    <div class="footer-bottom text-center mt-4">
+      <p>© 2026 SpeakPro. All Rights Reserved.</p>
+    </div>
+
+  </div>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function(){
+
+  const themeButtons = [
+    document.getElementById("themeToggle"),
+    document.getElementById("themeToggleMobile")
+  ];
+
+  const rtlButtons = [
+    document.getElementById("rtlToggle"),
+    document.getElementById("rtlToggleMobile")
+  ];
+
+  /* ---------- LOAD SAVED THEME ---------- */
+  if(localStorage.getItem("theme") === "dark"){
+    document.body.classList.add("dark-mode");
+    themeButtons.forEach(btn => {
+      if(btn) btn.innerHTML = '<i class="fas fa-sun"></i>';
+    });
+  }
+
+  /* ---------- LOAD SAVED RTL ---------- */
+  if(localStorage.getItem("rtl") === "enabled"){
+    document.body.classList.add("rtl");
+    document.documentElement.setAttribute("dir","rtl");
+  }
+
+  /* ---------- THEME TOGGLE ---------- */
+  themeButtons.forEach(btn => {
+    if(!btn) return;
+
+    btn.addEventListener("click", function(){
+
+      document.body.classList.toggle("dark-mode");
+
+      if(document.body.classList.contains("dark-mode")){
+        localStorage.setItem("theme","dark");
+        themeButtons.forEach(b => {
+          if(b) b.innerHTML = '<i class="fas fa-sun"></i>';
+        });
+      } else {
+        localStorage.setItem("theme","light");
+        themeButtons.forEach(b => {
+          if(b) b.innerHTML = '<i class="fas fa-moon"></i>';
+        });
+      }
+
+    });
+  });
+
+  /* ---------- RTL TOGGLE ---------- */
+  rtlButtons.forEach(btn => {
+    if(!btn) return;
+
+    btn.addEventListener("click", function(){
+
+      document.body.classList.toggle("rtl");
+
+      if(document.body.classList.contains("rtl")){
+        document.documentElement.setAttribute("dir","rtl");
+        localStorage.setItem("rtl","enabled");
+      } else {
+        document.documentElement.setAttribute("dir","ltr");
+        localStorage.setItem("rtl","disabled");
+      }
+
+    });
+  });
+
+});
+</script>
+<script id="fix-mobile-nav">
+document.addEventListener("DOMContentLoaded", function () {
+
+  document.querySelectorAll(".site-mobile-menu a").forEach(link => {
+
+    link.addEventListener("click", function(e) {
+
+      const href = this.getAttribute("href");
+
+      // If link is another page → allow redirect
+      if (href.includes(".html")) {
+        window.location.href = href;
+      }
+
+    });
+
+  });
+
+});
+</script>
+<script>
+function toggleMobileMenu() {
+  document.getElementById('mobileMenu').classList.toggle('open');
+}
+</script>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1000,
+    once: true
+  });
+</script>
+
+
+</body>
+</html>
